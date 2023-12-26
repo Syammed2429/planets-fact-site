@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Antonio } from 'next/font/google';
 import './globals.css';
+import HeaderComponent from '@/components/header/header';
 
 const antonio = Antonio({ subsets: ['latin'] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={antonio.className}>{children}</body>
+      <body className={antonio.className}>
+        <HeaderComponent />
+        {children}
+      </body>
     </html>
   );
 }
