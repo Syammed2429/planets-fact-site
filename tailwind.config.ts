@@ -50,6 +50,9 @@ const config = {
         'sky-blue-custom': '#1EC1A2',
         'dark-blue-custom': '#2D68F0',
       },
+      fontFamily: {
+        'league-spartan': ['League Spartan'], // Add this line
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
