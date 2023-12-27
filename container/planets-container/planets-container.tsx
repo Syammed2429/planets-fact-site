@@ -52,12 +52,12 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
       <div className=' flex flex-col  md:flex-col xl:flex-row  justify-center md:justify-around items-center md:items-start my-8'>
         <Tabs
           defaultValue='overview'
-          className='flex justify-between md:hidden w-full -mt-5 -mb-20'
+          className='flex justify-between  md:hidden   -mt-5 -mb-20'
         >
-          <TabsList className='flex items-start gap-2 h-[200px] bg-transparent  '>
+          <TabsList className='flex items-start gap-2 h-[200px] bg-transparent '>
             <TabsTrigger
               value='overview'
-              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5 '
+              className='w-[7rem] xs:w-[8rem]  h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5 '
               onClick={() => {
                 setIsInternal('planet');
                 setGeology('');
@@ -66,7 +66,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
               Overview
             </TabsTrigger>
             <TabsTrigger
-              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5
+              className='w-[7rem] xs:w-[8rem]  h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5
                 '
               value='interval'
               onClick={() => {
@@ -77,7 +77,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
               Structure
             </TabsTrigger>
             <TabsTrigger
-              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5'
+              className='w-[7rem] xs:w-[8rem]  h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5'
               value='geology'
               onClick={() => {
                 setIsInternal('planet');
@@ -90,7 +90,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
         </Tabs>
 
         <div
-          className='flex flex-col  md:w-[47rem]  pt-2 justify-center items-center md:justify-center md:items-center xl:justify-start xl:items-start
+          className='flex flex-col  md:w-[47rem]  lg:w-[58rem] xl:w-[47rem] pt-2 justify-center items-center md:justify-center md:items-center xl:justify-start xl:items-start
          md:mb-14 xl:mb-0'
         >
           <Image
@@ -175,7 +175,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
           </Tabs>
         </div>
       </div>
-      <div className='flex  flex-wrap  xl:justify-center mt-8 items-start gap-4 xl:gap-10 mb-8 '>
+      <div className='flex  flex-wrap  xl:justify-center mt-8 items-start gap-4 xl:gap-10 mb-20 '>
         <PlanetWeatherCard
           title='Rotation Time'
           description={selectedPlanet?.rotation as string}
