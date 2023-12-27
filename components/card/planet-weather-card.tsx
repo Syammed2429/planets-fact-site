@@ -16,8 +16,8 @@ export const PlanetWeatherCard: FC<PlanetWeatherCardProps> = ({
   description,
 }) => {
   return (
-    <Card className='w-[16rem] md:w-[10rem]  xl:w-[16rem]  flex-shrink-0 bg-dark-color-custom text-white border-[1px] border-opacity-20 rounded-none'>
-      <CardHeader>
+    <Card className=' w-full md:w-[10rem]  xl:w-[16rem]  flex-shrink-0 bg-dark-color-custom text-white border-[1px] border-opacity-20 rounded-none'>
+      <CardHeader className='flex flex-row justify-between items-center md:block'>
         <CardDescription className='font-league-spartan font-bold text-xs xl:leading-6 uppercase'>
           {title}
         </CardDescription>
