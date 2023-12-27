@@ -49,9 +49,9 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
 
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pt-[5rem] xl:pt-[7rem]'>
-      <div className=' flex flex-col  md:flex-col xl:flex-row  justify-around items-center md:items-start my-8'>
+      <div className=' flex flex-col  md:flex-col xl:flex-row  justify-center md:justify-around items-center md:items-start my-8'>
         <div
-          className='flex flex-col  w-[47rem]  pt-2 md:justify-center md:items-center xl:justify-start xl:items-start
+          className='flex flex-col  md:w-[47rem]  pt-2 justify-center items-center md:justify-center md:items-center xl:justify-start xl:items-start
          md:mb-14 xl:mb-0'
         >
           <Image
