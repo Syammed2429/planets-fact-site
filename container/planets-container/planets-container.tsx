@@ -7,7 +7,6 @@ import { PlanetWeatherCard } from '@/components/card/planet-weather-card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Link from 'next/link';
 import sourceIcon from '@/public/assets/icon-source.svg';
-import { cn } from '@/lib/utils';
 import { useColorStore } from '@/utils/store/store-management';
 interface PlanetsContainerProps {
   planetName: string;
