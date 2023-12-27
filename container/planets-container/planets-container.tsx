@@ -76,12 +76,12 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
           )}
         </div>
         <div className='max-w-[21rem] md:max-w-full xl:max-w-[21rem] 2xl:max-w-[21rem]  md:flex md:justify-around md:items-center md:gap-20 xl:gap-0 xl:block text-center md:text-left xl:justify-end'>
-          <div className='flex flex-col gap-10 md:max-w-[450px] '>
+          <div className='flex flex-col  gap-10 md:max-w-[450px] '>
             <div className='text-8xl uppercase '>{selectedPlanet?.name}</div>
             <div className='text-md font-league-spartan break-words font-normal'>
               {selectedPlanet?.overview.content}
             </div>
-            <div className='flex items-center gap-2 w-full text-lg font-league-spartan break-words font-normal '>
+            <div className='flex items-center justify-center md:justify-normal gap-2 w-full text-lg font-league-spartan  font-normal text-center'>
               Source :{' '}
               <Link
                 href={selectedPlanet?.overview.source}
@@ -99,7 +99,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
             </div>
           </div>
 
-          <Tabs defaultValue='overview' className=' md:w-full'>
+          <Tabs defaultValue='overview' className='hidden md:block md:w-full'>
             <TabsList className='flex flex-col items-start gap-4 h-[200px] bg-transparent  '>
               <TabsTrigger
                 value='overview'
