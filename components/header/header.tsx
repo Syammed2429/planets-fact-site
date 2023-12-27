@@ -1,8 +1,7 @@
 import React from 'react';
 import { planetsNames } from '@/utils/JsonData';
 import Link from 'next/link';
-import Image from 'next/image';
-import hamBurgerIcon from '@/public/assets/icon-hamburger.svg';
+import { MobileHeader } from './mobile-header';
 
 const HeaderComponent = () => {
   return (
@@ -19,12 +18,7 @@ const HeaderComponent = () => {
           ))}
         </div>
       </div>
-      <div className='flex items-center  justify-between p-5  md:hidden'>
-        <div className='xl:flex-1 md:mb-10 xl:mb-0 text-3xl'>THE PLANETS</div>
-        <div className='xl:flex-1 md:mb-10 xl:mb-0 text-3xl'>
-          <Image src={hamBurgerIcon} alt='hamBurgerIcon' />
-        </div>
-      </div>
+      <MobileHeader />
       <div className='bg-white w-full h-[1px] opacity-20'></div>
     </>
   );

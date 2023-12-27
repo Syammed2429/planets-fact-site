@@ -222,34 +222,49 @@ export const planetsData = [
 export const planetsNames = [
   {
     id: 1,
+    color: '/assets/mercury.svg',
     name: 'mercury',
   },
   {
     id: 2,
+    color: '/assets/venus.svg',
+
     name: 'venus',
   },
   {
     id: 3,
+    color: '/assets/earth.svg',
+
     name: 'earth',
   },
   {
     id: 4,
+    color: '/assets/mars.svg',
+
     name: 'mars',
   },
   {
     id: 5,
+    color: '/assets/jupiter.svg',
+
     name: 'jupiter',
   },
   {
     id: 6,
+    color: '/assets/saturn.svg',
+
     name: 'saturn',
   },
   {
     id: 7,
+    color: '/assets/uranus.svg',
+
     name: 'uranus',
   },
   {
     id: 8,
+    color: '/assets/neptune.svg',
+
     name: 'neptune',
   },
 ];
