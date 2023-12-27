@@ -38,8 +38,19 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      textColor: {
+        skin: {
+          base: 'var(--color-text-base)',
+        },
+      },
+      backgroundColor: {
+        skin: {
+          base: 'var(--color-fill)',
+        },
+      },
       colors: {
         'slate-custom': '#838391',
+        'custom-hover': '#D8D8D8',
         mercury: '#419EBB',
         venus: '#EDA249',
         'earth-color': '#6f2ed6',

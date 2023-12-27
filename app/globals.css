@@ -3,6 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    .mercury {
+      --color-text-base: #419ebb;
+    }
+
+    .venus {
+      --color-text-base: #eda249;
+    }
+    .earth {
+      --color-text-base: #6f2ed6;
+    }
+    .mars {
+      --color-text-base: #d14c32;
+    }
+    .jupiter {
+      --color-text-base: #d83a34;
+    }
+  }
+}
+
 body {
   background-image: url('/assets/background-stars.svg');
   background-color: #070724;
