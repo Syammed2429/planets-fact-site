@@ -48,9 +48,12 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
   }, [planetName, updateThemeColor]);
 
   return (
-    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[7rem]'>
-      <div className=' flex flex-col md:flex-row justify-around items-center md:items-start my-8'>
-        <div className='flex flex-col  w-[47rem]  pt-2'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pt-[5rem] xl:pt-[7rem]'>
+      <div className=' flex flex-col  md:flex-col xl:flex-row  justify-around items-center md:items-start my-8'>
+        <div
+          className='flex flex-col  w-[47rem]  pt-2 md:justify-center md:items-center xl:justify-start xl:items-start
+         md:mb-14 xl:mb-0'
+        >
           <Image
             src={selectedPlanet?.images?.[isInternal]}
             width={200}
@@ -72,8 +75,8 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
             />
           )}
         </div>
-        <div className='max-w-[21rem] text-center md:text-left justify-end'>
-          <div className='flex flex-col gap-10'>
+        <div className='max-w-[21rem] md:max-w-full xl:max-w-[21rem] 2xl:max-w-[21rem]  md:flex md:justify-around md:items-center md:gap-20 xl:gap-0 xl:block text-center md:text-left xl:justify-end'>
+          <div className='flex flex-col gap-10 md:max-w-[450px] '>
             <div className='text-8xl uppercase '>{selectedPlanet?.name}</div>
             <div className='text-md font-league-spartan break-words font-normal'>
               {selectedPlanet?.overview.content}
@@ -96,7 +99,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
             </div>
           </div>
 
-          <Tabs defaultValue='overview' className='w-[400px]'>
+          <Tabs defaultValue='overview' className=' md:w-full'>
             <TabsList className='flex flex-col items-start gap-4 h-[200px] bg-transparent  '>
               <TabsTrigger
                 value='overview'
@@ -133,7 +136,7 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
           </Tabs>
         </div>
       </div>
-      <div className='flex  flex-wrap justify-center mt-8 items-start gap-10 mb-8'>
+      <div className='flex  flex-wrap  xl:justify-center mt-8 items-start gap-4 xl:gap-10 mb-8 '>
         <PlanetWeatherCard
           title='Rotation Time'
           description={selectedPlanet?.rotation as string}

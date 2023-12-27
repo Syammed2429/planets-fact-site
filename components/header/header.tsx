@@ -5,8 +5,8 @@ import React from 'react';
 const HeaderComponent = () => {
   return (
     <>
-      <div className='flex items-center p-8 '>
-        <div className='flex-1 text-3xl'>THE PLANETS</div>
+      <div className='flex flex-col md:justify-center xl:flex-row items-center p-8 '>
+        <div className='xl:flex-1 md:mb-10 xl:mb-0 text-3xl'>THE PLANETS</div>
         <div className='flex gap-8 uppercase font-league-spartan tracking-[0.25rem] font-bold text-xs'>
           {planetsNames?.map((planet) => (
             <div key={planet?.name}>
