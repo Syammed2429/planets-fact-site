@@ -48,8 +48,47 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
   }, [planetName, updateThemeColor]);
 
   return (
-    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pt-[5rem] xl:pt-[7rem]'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  md:pt-[5rem] xl:pt-[7rem]'>
       <div className=' flex flex-col  md:flex-col xl:flex-row  justify-center md:justify-around items-center md:items-start my-8'>
+        <Tabs
+          defaultValue='overview'
+          className='flex justify-between md:hidden w-full -mt-5 -mb-20'
+        >
+          <TabsList className='flex items-start gap-2 h-[200px] bg-transparent  '>
+            <TabsTrigger
+              value='overview'
+              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5 '
+              onClick={() => {
+                setIsInternal('planet');
+                setGeology('');
+              }}
+            >
+              Overview
+            </TabsTrigger>
+            <TabsTrigger
+              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5
+                '
+              value='interval'
+              onClick={() => {
+                setIsInternal('internal');
+                setGeology('');
+              }}
+            >
+              Structure
+            </TabsTrigger>
+            <TabsTrigger
+              className='w-[8rem] h-[3rem] uppercase font-league-spartan text-white font-bold leading-6 tracking-[0.16rem] justify-start px-5'
+              value='geology'
+              onClick={() => {
+                setIsInternal('planet');
+                setGeology('geology');
+              }}
+            >
+              Surface
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
+
         <div
           className='flex flex-col  md:w-[47rem]  pt-2 justify-center items-center md:justify-center md:items-center xl:justify-start xl:items-start
          md:mb-14 xl:mb-0'
@@ -58,19 +97,17 @@ export const PlanetsContainer: FC<PlanetsContainerProps> = ({ planetName }) => {
             src={selectedPlanet?.images?.[isInternal]}
             width={200}
             height={200}
-            className='w-[20rem] h-[20rem] '
-            // objectFit='cover'
+            className=' md:w-[20rem] md:h-[20rem] '
             priority={true}
             alt={selectedPlanet?.name as string}
           />
           {geology && (
             <Image
               src={selectedPlanet?.images?.[geology]}
-              width={50}
-              height={50}
-              // objectFit='cover'
+              width={100}
+              height={100}
               priority={true}
-              className='relative bottom-[5rem] left-[5rem] flex justify-center w-[10rem] h-[12rem] '
+              className='relative  bottom-[3rem] md:bottom-[5rem]  md:left-[5rem] flex justify-center md:w-[10rem] md:h-[12rem] '
               alt={selectedPlanet?.name as string}
             />
           )}
